@@ -33,27 +33,36 @@ print(sum(salesArray[3]))
 #           Using the salesArray, create a new array that stores the 2% fee for each sale and register. Print the array and then print the total fees.
 print("-----------------------------------------------   STEP FIVE  -----------------------------------------------")
 
-print()
+feesarray = salesArray * .02
+print(feesarray)
+print("Total fees were:", feesarray.sum(),)
 
 ## Step 6: Using your fee array and salesArray, calculate how much profit Superstore made for each sale after paying credit card fees. Store this in a new array and print it.
 print("-----------------------------------------------   STEP SIX  -----------------------------------------------")
 
-print()
+profitarray = salesArray - feesarray
+print(profitarray)
+print("Total profit was:", profitarray.sum())
 
 ## Step 7: Print the sales only for the second and forth cash register
 print("-----------------------------------------------   STEP SEVEN  -----------------------------------------------")
 
-print()
+print(salesArray[1])
+print(salesArray[3])
 
 ## Step 8: Superstore has added a 5th cash register who's data is stored in the array newRegister. Add the new register to the original array. Print the updated salesArray.
 print("-----------------------------------------------   STEP EIGHT  -----------------------------------------------")
 newRegister = np.array([17.89,13.59,107.89,176.88,56.78])
 
-print()
+salesArray.resize(5,5)
+salesArray[4] = np.hstack((newRegister))
+print(salesArray)
 
 ## Step 9: Register #3 had an error and recorded it's fourth sale ($200.14) incorrectly. The sale should have been $20.14. Update the array to correct this error.
 #           Print the array before and after the update to see the change.
 print("-----------------------------------------------   STEP NINE  -----------------------------------------------")
 
-print()
+print(salesArray)
+salesArray[2,3] = 20.14
+print(salesArray)
 
