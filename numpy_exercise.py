@@ -24,6 +24,7 @@ print(highsales)
 ## Step 4: Print the total sales for each register.
 print("-----------------------------------------------   STEP FOUR   -----------------------------------------------")
 
+print(salesArray.sum(axis=1))
 print(sum(salesArray[0]))
 print(sum(salesArray[1]))
 print(sum(salesArray[2]))
